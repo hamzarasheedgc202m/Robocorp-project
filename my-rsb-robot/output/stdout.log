@@ -1,0 +1,48 @@
+
+Collecting tasks from: tasks.py
+======================= Running: [96mrobot_spare_bin_python[0m ========================
+[96mrobot_spare_bin_python[0m status: [91mFAIL
+[0m[91m
+Page.fill: Target page, context or browser has been closed
+Call log:
+waiting for locator("#salesresult")
+  -   locator resolved to <input required="" type="number" id="salesresult" name=…/>
+  -   fill("80516")
+  - attempting fill action
+  -   waiting for element to be visible, enabled and editable
+
+[0m=============== Full Traceback (running [96mrobot_spare_bin_python[0m) ================
+[91mTraceback (most recent call last):
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\robocorp\tasks\_commands.py", line 440, in run
+    result = task.run(*args, **kwargs)
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\robocorp\tasks\_task.py", line 89, in run
+    return self.method(*args, **kwargs)
+  File "c:\New folder\my-rsb-robot\tasks.py", line 17, in robot_spare_bin_python
+    fill_form_with_excel_data()
+  File "c:\New folder\my-rsb-robot\tasks.py", line 56, in fill_form_with_excel_data
+    fill_and_submit_sales_form(row)
+  File "c:\New folder\my-rsb-robot\tasks.py", line 40, in fill_and_submit_sales_form
+    page.fill("#salesresult", str(sales_rep["Sales"]))
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\playwright\sync_api\_generated.py", line 9707, in fill
+    self._sync(
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\playwright\_impl\_page.py", line 792, in fill
+    return await self._main_frame.fill(**locals_to_params(locals()))
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\playwright\_impl\_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\playwright\_impl\_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\robocorp\ht\f6a1289_b1f3c24_1c0bc041\lib\site-packages\playwright\_impl\_connection.py", line 513, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Page.fill: Target page, context or browser has been closed
+Call log:
+waiting for locator("#salesresult")
+  -   locator resolved to <input required="" type="number" id="salesresult" name=…/>
+  -   fill("80516")
+  - attempting fill action
+  -   waiting for element to be visible, enabled and editable
+
+
+[0m================================================================================
+Robocorp Log (html): c:\New folder\my-rsb-robot\output\log.html
